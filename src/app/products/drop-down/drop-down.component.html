@@ -1,0 +1,12 @@
+<p>drop-down works!</p>
+<app-drop-down></app-drop-down>
+<h3>Choose Your Product</h3>
+<select #cricket (change)="Update($event)">
+	<option value="default">----</option>
+	<option *ngFor="let Item of ICategory" [value]="ICategory">
+		{{Item}}
+	</option>
+</select>
+
+<p>You selected {{selected}}</p>
+

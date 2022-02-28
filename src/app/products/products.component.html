@@ -12,4 +12,49 @@
 <br>
 <img [src]="imgURL">  <!--property binding-->
 <br>
-{{"We offer an explicit discount of"+ Discount}}   <!--Concatination -->
+
+<!-- 1  using ng-template to hide content if the value is true by using *ngIf -->
+
+<h3 *ngIf="Discount=='No_Discount'?false:true">{{"We offer an explicit discount of"+ Discount}} </h3>  <!--Concatination -->
+
+<br>
+
+<!-- 3 table to dispaly list -->
+<ng-template #iftabShow>
+<table *ngIf="IsFlag">
+<thead>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Img</th>
+</thead>
+<tbody>
+    <tr *ngFor="let list in ProductList;">
+        <td>{{list.ID}}</td>
+        <td>{{list.Name}}</td>
+        <td>{{list.Quantity}}</td>
+        <td>{{list.Price}}</td>
+        <td>{{list.Img}}</td>
+    </tr>
+</tbody>
+</table>
+</ng-template>
+
+<!-- 4 using banana operator-->
+<input [(ngModel)]="Client_Name" type="text">{{Client_Name}}
+
+<!-- 5  button used to check -->
+<input type="button" value="Buy" (click)="isSelected()">
+
+<ng-template #elsedivShow>
+    <div>{{DivMsg+Client_Name}}</div>
+</ng-template>
+
+<!-- using pipes to convert character to upper case -->
+{{Store_Name|uppercase}}
+
+<!-- using pipes to convert Discount to percent -->
+{{Discount|percent}}
+
+

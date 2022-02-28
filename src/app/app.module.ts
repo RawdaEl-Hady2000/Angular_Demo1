@@ -7,6 +7,11 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { ContentProjectComponent } from './content-project/content-project.component';
+import { FormsModule } from '@angular/forms';
+import { DropDownComponent } from './products/drop-down/drop-down.component';
+// import {Icategory} from './Shared-Classes-and-Types/Icategory_Interface';
+import { IcategoryComponent } from './products/icategory/icategory.component';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +19,15 @@ import { ContentProjectComponent } from './content-project/content-project.compo
     HeaderComponent,
     FooterComponent,
     ProductsComponent,
-    ContentProjectComponent
+    ContentProjectComponent,
+    DropDownComponent,
+    IcategoryComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
