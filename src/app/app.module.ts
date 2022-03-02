@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ProductsComponent } from './products/products.component';
+import { ProductsComponent } from "./products/ProductsComponent";
 import { ContentProjectComponent } from './content-project/content-project.component';
 import { FormsModule } from '@angular/forms';
 import { DropDownComponent } from './products/drop-down/drop-down.component';
